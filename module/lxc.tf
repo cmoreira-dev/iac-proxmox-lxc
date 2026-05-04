@@ -1,7 +1,7 @@
 resource "proxmox_virtual_environment_container" "lxc_container" {
   node_name   = var.proxmox_node
   vm_id       = var.lxc_vmid_start
-  description = "${var.lxc_description} — ${local.runner_name}"
+  description = "${var.lxc_description} — ${local.lxc_name}"
   tags        = var.lxc_tags
 
   start_on_boot = true
@@ -13,7 +13,7 @@ resource "proxmox_virtual_environment_container" "lxc_container" {
   }
 
   initialization {
-    hostname = "${local.runner_name}"
+    hostname = "${local.lxc_name}"
 
     dns {
       domain  = var.dns_domain

@@ -1,3 +1,3 @@
 locals {
-  runner_name = "${var.runner_base_name}-${var.runner_purpose}"
+  lxc_name = "${var.lxc_base_name}-${var.lxc_purpose}"
 }

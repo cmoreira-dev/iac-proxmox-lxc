@@ -133,13 +133,13 @@ variable "root_password" {
   sensitive   = true
 }
 
-variable "runner_base_name" {
+variable "lxc_base_name" {
   description = "Base name for the runner"
   type        = string
   default     = "proxmox-runner"
 }
 
-variable "runner_purpose" {
+variable "lxc__purpose" {
   description = "Purpose of the runner"
   type        = string
   default     = "docker-build"
