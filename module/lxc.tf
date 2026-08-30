@@ -13,7 +13,7 @@ resource "proxmox_virtual_environment_container" "lxc_container" {
   }
 
   initialization {
-    hostname = "${local.lxc_name}"
+    hostname = local.lxc_name
 
     dns {
       domain  = var.dns_domain
