@@ -1,26 +1,6 @@
-variable "proxmox_endpoint" {
-  description = "Proxmox API URL (e.g., https://127.0.0.1:8006)"
-  default     = null
-  type        = string
-}
-
-variable "proxmox_username" {
-  description = "Proxmox user (e.g., terraform@pve or root@pam)"
-  type        = string
-  default     = ""
-}
-
-variable "proxmox_password" {
-  description = "Password for the Proxmox user"
-  type        = string
-  sensitive   = true
-}
-
-variable "proxmox_insecure" {
-  description = "Skip invalid TLS certificate validation (self-signed)"
-  type        = bool
-  default     = true
-}
+# Proxmox provider auth (endpoint / token / insecure) is NOT declared here —
+# it comes from the Terragrunt-generated provider
+# (iac.homelab-live-infra/_providers/proxmox.hcl). See providers.tf.
 
 variable "proxmox_node" {
   description = "Proxmox node name where the LXC will be created"
@@ -30,13 +10,13 @@ variable "proxmox_node" {
 
 variable "lxc_description" {
   description = ""
-  type = string
+  type        = string
 }
 
 variable "lxc_tags" {
   description = ""
-  default = [""]
-  type = list(string)
+  default     = [""]
+  type        = list(string)
 }
 
 variable "lxc_vmid_start" {
@@ -100,8 +80,8 @@ variable "proxmox_network_gateway" {
 
 variable "proxmox_network_interface_name" {
   description = ""
-  type = string
-  default = "eth0"
+  type        = string
+  default     = "eth0"
 }
 
 variable "dns_domain" {
@@ -139,7 +119,7 @@ variable "lxc_base_name" {
   default     = "proxmox-runner"
 }
 
-variable "lxc__purpose" {
+variable "lxc_purpose" {
   description = "Purpose of the runner"
   type        = string
   default     = "docker-build"
@@ -147,7 +127,7 @@ variable "lxc__purpose" {
 
 variable "lxc_provision_script_path" {
   description = "Script for post creation"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
 
