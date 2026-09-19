@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: iac-proxmox-lxc
+  description: Reusable Terraform module for Proxmox LXC containers
+  annotations:
+    github.com/project-slug: cmoreira-dev/iac-proxmox-lxc
+spec:
+  type: library
+  owner: platform-team
+  system: homelab-platform
+  lifecycle: experimental
