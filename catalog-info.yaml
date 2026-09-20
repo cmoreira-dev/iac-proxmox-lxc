@@ -5,6 +5,7 @@ metadata:
   description: Reusable Terraform module for Proxmox LXC containers
   annotations:
     github.com/project-slug: cmoreira-dev/iac-proxmox-lxc
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: library
   owner: platform-team
