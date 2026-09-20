@@ -1,0 +1,8 @@
+site_name: 'iac-proxmox-lxc'
+site_description: 'Reusable Terraform module for Proxmox LXC containers'
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
