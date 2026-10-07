@@ -1,6 +1,6 @@
 # Proxmox provider auth (endpoint / token / insecure) is NOT declared here —
 # it comes from the Terragrunt-generated provider
-# (iac.homelab-live-infra/_providers/proxmox.hcl). See providers.tf.
+# (<live-infra-repo>/_providers/proxmox.hcl). See providers.tf.
 
 variable "proxmox_node" {
   description = "Proxmox node name where the LXC will be created"
